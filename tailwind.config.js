@@ -13,6 +13,14 @@ module.exports = {
           200:"#ffffff29",
           300: "#ffffffa3",
         },
+        gray:{
+          DEFAULT:"#000000",
+          200:"#EAECF0",
+          500:"#667085",
+          700:"#344054",
+          800:"#1D2939",
+          900:"#101828",
+        }
       },
       backgroundImage: {
         "gray-gradient":

@@ -1,24 +1,24 @@
 import { Button, Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
 import { useState } from "react";
-import metamask from "../../../assets/metamask.svg"
-import trustwallet from "../../../assets/trustwallet.svg"
-import others from "../../../assets/others.svg"
+import metamask from "../../../assets/metamask.svg";
+import trustwallet from "../../../assets/trustwallet.svg";
+import others from "../../../assets/others.svg";
 import Close from "../../../icons/Close";
 import CreateProfile from "./CreateProfile";
 
-export default function ConnectWallet({isOpen,close}) {
-let [isOpenProfile, setIsOpenProfile] = useState(false);
+export default function ConnectWallet({ isOpen, close }) {
+  let [isOpenProfile, setIsOpenProfile] = useState(false);
 
-function openProfile() {
-   close();
-   setTimeout(() => {
-     setIsOpenProfile(true); 
-   }, 300);
-}
+  function openProfile() {
+    close();
+    setTimeout(() => {
+      setIsOpenProfile(true);
+    }, 300);
+  }
 
-function closeProfile() {
-  setIsOpenProfile(false);
-}
+  function closeProfile() {
+    setIsOpenProfile(false);
+  }
   return (
     <>
       <Dialog
@@ -77,7 +77,7 @@ function closeProfile() {
                   </div>
                 </div>
               </div>
-              <div className="py-6 px-4 bg-gray-800 border-t border-gray-700">
+              <div className="py-6 px-4 bg-gray-800 border-t border-gray-700 rounded-b-[12px]">
                 <h6 className="font-onest text-sm tracking-[-0.28px] text-gray-500 text-center">
                   By connecting your wallet, you agree to our Terms of Service
                   and Privacy Policy

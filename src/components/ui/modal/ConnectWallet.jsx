@@ -52,11 +52,7 @@ export default function ConnectWallet({isOpen,close}) {
                       Metamask
                     </h5>
                   </div>
-                  <div className="bg-[#FEFAF5] text-[#F79009] px-2 rounded-[2px] flex justify-center items-center h-[24px]">
-                    <h6 className="text-xs font-onest font-semibold uppercase tracking-[-0.24px]">
-                      INSTALLED
-                    </h6>
-                  </div>
+                 
                 </div>
                 <div className="w-full flex justify-between items-center bg-gray-800 rounded-[8px] p-3">
                   <div className="flex items-center gap-4 ">
@@ -65,11 +61,7 @@ export default function ConnectWallet({isOpen,close}) {
                       Metamask
                     </h5>
                   </div>
-                  <div className="bg-[#FEFAF5] text-[#F79009] px-2 rounded-[2px] flex justify-center items-center h-[24px]">
-                    <h6 className="text-xs font-onest font-semibold uppercase tracking-[-0.24px]">
-                      INSTALLED
-                    </h6>
-                  </div>
+                  
                 </div>
               </div>
               <div className="py-6 px-4 bg-gray-800 border-t border-gray-700">

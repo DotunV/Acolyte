@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import mask from "../../assets/mask.png";
 import Navbar from "../../components/navbar";
 import price from "../../assets/price.svg";
@@ -13,7 +13,20 @@ import cooment from "../../assets/comment.svg";
 import share from "../../assets/share.svg";
 import aco from "../../assets/aco.svg";
 import more from "../../assets/more.svg";
+import CreatePost from "../../components/ui/modal/CreatePost";
 export default function Home() {
+      let [isOpenPost, setIsOpenPost] = useState(false);
+
+      function openPost() {
+        closePost();
+        setTimeout(() => {
+          setIsOpenPost(true);
+        }, 300);
+      }
+
+      function closePost() {
+        setIsOpenPost(false);
+      }
   return (
     <div className="thunder_bold">
       <div className="relative  lg:h-full h-full">
@@ -22,7 +35,7 @@ export default function Home() {
           className="absolute left-0 w-full h-full z-20  bg-cover bg-no-repeat"
           alt="mask"
         />
-        <div className="absolute left-0 z-[300] w-full  ">
+        <div className="absolute left-0 z-[100] w-full  ">
           <Navbar />
         </div>
         <div className="relative z-[50] grid xl:grid-cols-4 grid-cols-1  gap-[40px]  pt-[15vh] pb-[2vh] h-screen max-w-7xl mx-auto px-[3%]">
@@ -41,7 +54,10 @@ export default function Home() {
                 <h4 className="text-[26px] leading-[28px] text-gray-200 ">
                   What’s happening around you today?
                 </h4>
-                <button className="thunder_bold bg-gray-600 w-full h-[50px] rounded-[8px] text-xl text-white font-bold flex justify-center items-center gap-2 ">
+                <button
+                  onClick={openPost}
+                  className="thunder_bold bg-gray-600 w-full h-[50px] rounded-[8px] text-xl text-white font-bold flex justify-center items-center gap-2 "
+                >
                   Create a post
                   <img src={plus} alt="plus" />
                 </button>
@@ -352,6 +368,10 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <CreatePost
+        isOpenPost={isOpenPost}
+        closePost={closePost}
+      />
     </div>
   );
 }

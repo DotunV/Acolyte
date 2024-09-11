@@ -5,7 +5,20 @@ import Close from "../../../icons/Close";
 import verification from "../../../assets/verification.png";
 import image from "../../../assets/image.svg";
 import aco from "../../../assets/aco.svg";
+import CreateSwiss from "./CreateSwiss";
 export default function CreatePost({ isOpenPost, closePost }) {
+        let [isOpenSwiss, setIsOpenSwiss] = useState(false);
+
+        function openSwiss() {
+          closePost();
+          setTimeout(() => {
+            setIsOpenSwiss(true);
+          }, 300);
+        }
+
+        function closeSwiss() {
+          setIsOpenSwiss(false);
+        }
   return (
     <>
       <Dialog
@@ -23,7 +36,7 @@ export default function CreatePost({ isOpenPost, closePost }) {
               >
                 <div className="p-6 border-b border-gray-700 flex justify-between items-center ">
                   <h4 className="text-gray-200 text-center thunder_bold text-[24px]">
-                    Create Profile
+                    Create Post
                   </h4>
 
                   <button onClick={closePost} className="">
@@ -57,9 +70,14 @@ export default function CreatePost({ isOpenPost, closePost }) {
                       <p className="font-onest text-base">GIF</p>
                     </div>
                   </div>
-                  <button className=" bg-gray-600 p-2 rounded-full flex gap-2 items-center">
+                  <button
+                    onClick={openSwiss}
+                    className=" bg-gray-600 p-2 rounded-full flex gap-2 items-center"
+                  >
                     <img src={aco} />
-                    <h5 className="text-base font-medium text-white">Create a Swiss Event</h5>
+                    <h5 className="text-base font-medium text-white">
+                      Create a Swiss Event
+                    </h5>
                   </button>
                 </div>
                 <div className="py-6 px-4 bg-gray-800 border-t border-gray-700 rounded-b-[12px]">
@@ -72,6 +90,7 @@ export default function CreatePost({ isOpenPost, closePost }) {
           </div>
         </div>
       </Dialog>
+      <CreateSwiss isOpenSwiss={isOpenSwiss} closeSwiss={closeSwiss} />
     </>
   );
 }

@@ -6,6 +6,7 @@ import wallet from "../../assets/wallet.png"
 import Navbar from "../../components/navbar";
 import ConnectWallet from "../../components/ui/modal/ConnectWallet";
 const Auth = () => {
+  
      let [isOpen, setIsOpen] = useState(false);
 
      function open() {

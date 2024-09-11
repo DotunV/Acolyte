@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      scrollbar: {
+        none: "none",
+      },
       fontFamily: {
         onest: ["Onest", "sans-serif"],
       },
@@ -10,18 +13,18 @@ module.exports = {
         white: {
           DEFAULT: "#FFFFFF",
           100: "#ffffff3d",
-          200:"#ffffff29",
+          200: "#ffffff29",
           300: "#ffffffa3",
         },
-        gray:{
-          DEFAULT:"#000000",
-          200:"#EAECF0",
-          400:"#98A2B3",
-          500:"#667085",
-          700:"#344054",
-          800:"#1D2939",
-          900:"#101828",
-        }
+        gray: {
+          DEFAULT: "#000000",
+          200: "#EAECF0",
+          400: "#98A2B3",
+          500: "#667085",
+          700: "#344054",
+          800: "#1D2939",
+          900: "#101828",
+        },
       },
       backgroundImage: {
         "gray-gradient":

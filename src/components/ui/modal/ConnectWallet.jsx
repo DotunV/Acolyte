@@ -4,10 +4,21 @@ import metamask from "../../../assets/metamask.svg"
 import trustwallet from "../../../assets/trustwallet.svg"
 import others from "../../../assets/others.svg"
 import Close from "../../../icons/Close";
+import CreateProfile from "./CreateProfile";
 
 export default function ConnectWallet({isOpen,close}) {
+let [isOpenProfile, setIsOpenProfile] = useState(false);
 
+function openProfile() {
+   close();
+   setTimeout(() => {
+     setIsOpenProfile(true); 
+   }, 300);
+}
 
+function closeProfile() {
+  setIsOpenProfile(false);
+}
   return (
     <>
       <Dialog
@@ -28,11 +39,14 @@ export default function ConnectWallet({isOpen,close}) {
                 </h4>
 
                 <button OnClick={close} className="absolute right-6 top-7">
-                  <Close  />
+                  <Close />
                 </button>
               </div>
               <div className="p-6 flex flex-col gap-2">
-                <div className="w-full flex justify-between items-center bg-gray-800 rounded-[8px] p-3">
+                <div
+                  onClick={openProfile}
+                  className="cursor-pointer w-full flex justify-between items-center bg-gray-800 rounded-[8px] p-3"
+                >
                   <div className="flex items-center gap-4 ">
                     <img src={metamask} alt="metamask" />
                     <h5 className="text-gray-200 font-medium font-onest text-lg">
@@ -45,23 +59,22 @@ export default function ConnectWallet({isOpen,close}) {
                     </h6>
                   </div>
                 </div>
+
                 <div className="w-full flex justify-between items-center bg-gray-800 rounded-[8px] p-3">
                   <div className="flex items-center gap-4 ">
                     <img src={trustwallet} alt="metamask" />
                     <h5 className="text-gray-200 font-medium font-onest text-lg">
-                      Metamask
+                      Trustwallet
                     </h5>
                   </div>
-                 
                 </div>
                 <div className="w-full flex justify-between items-center bg-gray-800 rounded-[8px] p-3">
                   <div className="flex items-center gap-4 ">
                     <img src={others} alt="metamask" />
                     <h5 className="text-gray-200 font-medium font-onest text-lg">
-                      Metamask
+                      Others
                     </h5>
                   </div>
-                  
                 </div>
               </div>
               <div className="py-6 px-4 bg-gray-800 border-t border-gray-700">
@@ -74,6 +87,10 @@ export default function ConnectWallet({isOpen,close}) {
           </div>
         </div>
       </Dialog>
+      <CreateProfile
+        isOpenProfile={isOpenProfile}
+        closeProfile={closeProfile}
+      />
     </>
   );
 }

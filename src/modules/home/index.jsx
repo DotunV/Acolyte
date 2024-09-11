@@ -22,10 +22,10 @@ export default function Home() {
           className="absolute left-0 w-full h-full z-20  bg-cover bg-no-repeat"
           alt="mask"
         />
-        <div className="absolute left-0 z-[30] w-full  ">
+        <div className="absolute left-0 z-[300] w-full  ">
           <Navbar />
         </div>
-        <div className="relative z-[50] grid grid-cols-4  gap-[40px]  pt-[16vh] pb-[4vh] h-screen max-w-7xl mx-auto px-[3%]">
+        <div className="relative z-[50] grid grid-cols-4  gap-[40px]  pt-[15vh] pb-[2vh] h-screen max-w-7xl mx-auto px-[3%]">
           <div className="col-span-1 bg-gray-800 rounded-[12px]  px-6 pt-6 flex flex-col justify-between h-full">
             <div>
               <div className="flex flex-col gap-4 pb-4 border-b border-gray-700">

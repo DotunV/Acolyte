@@ -26,7 +26,7 @@ const Auth = () => {
         <div className="absolute left-0 z-[30] w-full  ">
           <Navbar />
         </div>
-        <div className="relative z-[20] grid lg:grid-cols-2 grid-cols-1 gap-[40px] h-full pt-[16vh] pb-[4vh] xl:px-[5%] px-[4%] max-w-7xl mx-auto ">
+        <div className="relative z-[20] grid lg:grid-cols-2 grid-cols-1 gap-[40px] h-full pt-[15vh] pb-[2vh] xl:px-[3%] px-[4%] max-w-7xl mx-auto ">
           <div className="col-span-1 bg-white-100 border border-white-300 rounded-[12px] xl:px-[5%] px-[4%] flex flex-col justify-center  backdrop-blur-[2px] xl:h-full xl:pt-0 pt-[64px] xl:pb-0 pb-6">
             <h2 className="md:text-[85px] text-[40px] thunder_bold leading-[96%] text-white">
               Social Interaction <br /> Made Fun
